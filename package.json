@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ybribeiro14/retrieve-json-to-xml/issues"
   },
-  "homepage": "https://github.com/ybribeiro14/retrieve-json-to-xml#readme"
+  "homepage": "https://github.com/ybribeiro14/retrieve-json-to-xml#readme",
+  "publishConfig": {
+    "ybribeiro14:registry": "https://npm.pkg.github.com"
+  }
 }
