@@ -1,0 +1,144 @@
+[
+  {
+    "origin": "",
+    "target": "OrderActionType",
+    "static_value" : "A"
+  },
+  {
+    "origin": "extension_attributes.syspro_id",
+    "target": "Customer"
+  },
+  {
+    "origin": "created_at",
+    "target": "OrderDate",
+    "convert_function": "return value.substring(0, 10)"
+  },
+  {
+    "origin": "",
+    "target": "InvoiceTerms",
+    "static_value" : "27"
+  },
+  {
+    "origin": "",
+    "target": "Currency",
+    "static_value" : "$"
+  },
+  {
+    "origin": "shipping_description",
+    "target": "ShippingInstrs",
+    "convert_function": "return value.substring(0, 40)"
+  },
+  {
+    "origin": "extension_attributes.company_order_attributes.company_name",
+    "target": "CustomerName",
+    "convert_function": "return value.substring(0, 40)"
+  },
+  {
+    "origin": "billing_address.street.0",
+    "target": "ShipAddress1"
+  },
+  {
+    "origin": "billing_address.street.1",
+    "target": "ShipAddress2"
+  },
+  {
+    "origin": "billing_address.city",
+    "target": "ShipAddress3"
+  },
+  {
+    "origin": "billing_address.region_code",
+    "target": "ShipAddress4"
+  },
+  {
+    "origin": "billing_address.postcode",
+    "target": "ShipPostalCode"
+  },
+  {
+    "origin": "customer_email",
+    "target": "Email"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.StockLine.CustomerPoLine",
+    "convert_function": "return a + 1"
+  },
+  {
+    "origin": "items.x.sku",
+    "target": "OrderDetails.StockLine.StockCode"
+  },
+  {
+    "origin": "items.x.extension_attributes.suggested_inventory_source",
+    "target": "OrderDetails.StockLine.Warehouse"
+  },
+  {
+    "origin": "items.x.qty_ordered",
+    "target": "OrderDetails.StockLine.OrderQty"
+  },
+  {
+    "origin": "items.x.extension_attributes.unit_of_measure",
+    "target": "OrderDetails.StockLine.OrderUom"
+  },
+  {
+    "origin": "items.x.price",
+    "target": "OrderDetails.StockLine.Price"
+  },
+  {
+    "origin": "items.x.extension_attributes.unit_of_measure_price",
+    "target": "OrderDetails.StockLine.PriceUom"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.StockLine.PriceCode",
+    "static_value" : "TEST"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.StockLine.AlwaysUsePriceEntered",
+    "static_value" : "Y"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.StockLine.AlwaysUseDiscountEntered",
+    "static_value" : "N"
+  },
+  {
+    "origin": "items.x.created_at",
+    "target": "OrderDetails.StockLine.CustRequestDate",
+    "convert_function": "return value.substring(0, 10)"
+  },
+  {
+    "origin": "extension_attributes.bold_order_comment",
+    "target": "OrderDetails.CommentLine.CustomerPoLine",
+    "convert_function": "return value ? a + 1 : null"
+  },
+  {
+    "origin": "extension_attributes.bold_order_comment",
+    "target": "OrderDetails.CommentLine.LineActionType",
+    "static_value": "A",
+    "convert_function": "return value && value"
+  },
+  {
+    "origin": "extension_attributes.bold_order_comment",
+    "target": "OrderDetails.CommentLine.Comment",
+    "convert_function": "return value && value"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.FreightLine.CustomerPoLine",
+    "convert_function": "return a + 1"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.FreightLine.LineActionType",
+    "static_value": "A"
+  },
+  {
+    "origin": "shipping_amount",
+    "target": "OrderDetails.FreightLine.FreightValue"
+  },
+  {
+    "origin": "",
+    "target": "OrderDetails.FreightLine.FreightCost",
+    "static_value": "0"
+  }
+]
