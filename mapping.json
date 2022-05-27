@@ -39,7 +39,8 @@
   },
   {
     "origin": "billing_address.street.1",
-    "target": "ShipAddress2"
+    "target": "ShipAddress2",
+    "convert_function": "return value && value"
   },
   {
     "origin": "billing_address.city",
