@@ -2,7 +2,8 @@
 
 ## Installation
 
-```npmrc file
+### npmrc file
+```bash
 registry=https://npm.pkg.github.com/ybribeiro14
 //npm.pkg.github.com/:_authToken=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
 ```
